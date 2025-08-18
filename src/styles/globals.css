@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* ── Base tokens consumed by Tailwind v4 via @theme ───────────── */
+@theme inline {
+  /* Fonts */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+               "Noto Color Emoji", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
+               Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Semantic color tokens (map to CSS vars below) */
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);     /* cards / panels */
+  --color-surface-2: var(--surface-2); /* hovered cards / elevated */
+  --color-brand: var(--brand);
+  --color-brand-foreground: oklch(0.99 0 0);
+
+  /* Radius & shadows */
+  --radius-card: 1.25rem;
+}
+
+/* ── Light mode (default) ─────────────────────────────────────── */
+:root {
+  color-scheme: light;
+
+  /* Neutral, clean light palette */
+  --bg: oklch(0.985 0.003 95);              /* near-white */
+  --fg: oklch(0.23 0.03 262);               /* neutral 900 */
+  --muted: oklch(0.55 0.03 262);            /* neutral 500/600 */
+  --border: color-mix(in oklch, black 10%, transparent);
+  --surface: color-mix(in oklch, black 3%, transparent);
+  --surface-2: color-mix(in oklch, black 5%, transparent);
+
+  /* Brand: refined indigo (change if you like) */
+  --brand: oklch(0.68 0.16 260);
+  --ring: color-mix(in oklch, var(--brand) 25%, transparent);
+}
+
+/* ── Dark mode (system) ───────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    /* True-dark friendly palette (OLED-safe) */
+    --bg: oklch(0.14 0.01 262);             /* ≈ #0a0a0a */
+    --fg: oklch(0.93 0.01 262);             /* near-white */
+    --muted: oklch(0.70 0.02 262);          /* neutral 400ish */
+    --border: color-mix(in oklch, white 12%, transparent);
+    --surface: color-mix(in oklch, white 5%, transparent);
+    --surface-2: color-mix(in oklch, white 7%, transparent);
+
+    --ring: color-mix(in oklch, var(--brand) 30%, transparent);
+  }
+}
+
+/* ── Manual theme override via next-themes (.dark / .light) ───── */
+.light { color-scheme: light; }
+.dark {
+  color-scheme: dark;
+  --bg: oklch(0.14 0.01 262);
+  --fg: oklch(0.93 0.01 262);
+  --muted: oklch(0.70 0.02 262);
+  --border: color-mix(in oklch, white 12%, transparent);
+  --surface: color-mix(in oklch, white 5%, transparent);
+  --surface-2: color-mix(in oklch, white 7%, transparent);
+  --ring: color-mix(in oklch, var(--brand) 30%, transparent);
+}
+
+/* ── Base element resets / polish ─────────────────────────────── */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links & selection */
+a { color: var(--brand); }
+a:hover { opacity: 0.9; }
+::selection {
+  background: color-mix(in oklch, var(--brand) 35%, transparent);
+  color: var(--color-brand-foreground);
+}
+
+/* Better focus visibility (WCAG) */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--ring);
+  border-radius: 0.5rem;
+}
+
+/* Optional: thin scrollbar for desktop */
+@supports (scrollbar-color: auto) {
+  * {
+    scrollbar-color: color-mix(in oklch, var(--fg) 20%, transparent)
+                     color-mix(in oklch, var(--fg) 6%, transparent);
+    scrollbar-width: thin;
+  }
+}
