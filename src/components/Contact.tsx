@@ -46,7 +46,7 @@ export default function Contact() {
             {pending ? "Sending…" : "Send message"}
           </button>
           
-          <span id="resume">
+          <span>
             <a href="/resume/Thrang_CV.pdf" className="text-sm underline underline-offset-4">
                 Download résumé
             </a>

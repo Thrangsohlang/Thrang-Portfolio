@@ -76,6 +76,7 @@ export default function About() {
                 View Projects
               </Link>
               <Link
+                id="resume"
                 href="/resume/Thrang_CV.pdf"
                 className="rounded-xl border border-[--color-border] bg-[--color-surface] px-5 py-3 text-sm hover:bg-[--color-surface-2]"
               >
