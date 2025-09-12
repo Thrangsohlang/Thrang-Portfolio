@@ -27,9 +27,34 @@ const PROJECTS: Project[] = [
     title: "HTS Agent",
     description:
       "Tariff Chatbot + classifier + calculator with tools and function calling.",
-    tech: ["Langchain", "Python", "Pydantic", "FastAPI", "Streamlit", "OpenAI API"],
+    tech: [
+      "Langchain",
+      "Python",
+      "Pydantic",
+      "FastAPI",
+      "Streamlit",
+      "OpenAI API",
+    ],
     repo: "https://github.com/Thrangsohlang/HTSAgent",
     featured: true,
+    status: "done",
+  },
+  {
+    title: "Khasi-ASR",
+    description:
+      "Khasi speech-to-text with fine-tuned Whisper-small. Streamlit UI + FastAPI. Dockerized on HF Spaces.",
+    tech: ["FastAPI", "Streamlit", "Docker", "Whisper", "Hugging Face Spaces"],
+    repo: "https://huggingface.co/spaces/ThrangSohlang/Khasi_ASR/tree/main",
+    demo: "https://huggingface.co/spaces/ThrangSohlang/Khasi_ASR",
+    featured: true,
+    status: "done",
+  },
+  {
+    title: "Gene Mutation Classification",
+    description:
+      "Classic ML Classification: feature engineering, model comparison, and reporting.",
+    tech: ["Scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
+    repo: "https://github.com/Thrangsohlang/gene_mutation",
     status: "done",
   },
   {
@@ -41,17 +66,18 @@ const PROJECTS: Project[] = [
     status: "done",
   },
   {
-    title: "Gene Mutation Classification",
-    description:
-      "Classic ML Classification: feature engineering, model comparison, and reporting.",
-    tech: ["Scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
-    status: "done",
-  },
-  {
     title: "Alpherg-Viator",
     description:
       "AI Agent Travel assistant with access to real time database for hotels, guides, cabs. Itinerary Planning and single payment window.",
-    tech: ["Python", "Langgraph", "PostGres", "FastAPI", "AWS", "Next.js", "Tailwind CSS"],
+    tech: [
+      "Python",
+      "Langgraph",
+      "PostGres",
+      "FastAPI",
+      "AWS",
+      "Next.js",
+      "Tailwind CSS",
+    ],
     featured: true,
     status: "wip",
   },
@@ -132,14 +158,12 @@ function ProjectCard({
 }: Project) {
   return (
     <article
-        className="group relative flex flex-col justify-between rounded-2xl
+      className="group relative flex flex-col justify-between rounded-2xl
                     border border-[oklch(0.45_0.15_25)] bg-[--color-surface] p-5
                     backdrop-blur shadow-[0_12px_40px_-16px_rgba(0,0,0,.7)]
                     transition hover:-translate-y-1 hover:bg-[--color-surface-2]
                     hover:border-[oklch(0.17_0.20_25)]"
     >
-
-
       {/* top meta */}
       <div className="mb-4 flex items-start justify-between gap-3">
         <div className="flex flex-wrap items-center gap-2">
@@ -179,7 +203,7 @@ function ProjectCard({
       <div
         className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition group-hover:opacity-100"
         style={{
-        background:
+          background:
             "radial-gradient(600px circle at 20% 0%, color-mix(in oklch, oklch(0.65 0.13 180) 12%, transparent), transparent 40%)",
         }}
         aria-hidden
@@ -191,8 +215,14 @@ function ProjectCard({
 export default function ProjectsSection() {
   function onMouseMove(e: React.MouseEvent<HTMLElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
-    (e.currentTarget as HTMLElement).style.setProperty("--x", `${e.clientX - rect.left}px`);
-    (e.currentTarget as HTMLElement).style.setProperty("--y", `${e.clientY - rect.top}px`);
+    (e.currentTarget as HTMLElement).style.setProperty(
+      "--x",
+      `${e.clientX - rect.left}px`
+    );
+    (e.currentTarget as HTMLElement).style.setProperty(
+      "--y",
+      `${e.clientY - rect.top}px`
+    );
   }
 
   return (
@@ -207,7 +237,8 @@ export default function ProjectsSection() {
           Projects
         </h2>
         <p className="mt-3 text-[--color-muted]">
-          A selection of things I&apos;ve build recently. Click through for code or a live demo.
+          A selection of things I&apos;ve build recently. Click through for code
+          or a live demo.
         </p>
       </div>
 
