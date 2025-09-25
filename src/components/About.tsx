@@ -33,14 +33,14 @@ export default function About() {
               <span className="font-medium">FastAPI</span>, <span className="font-medium">GPT</span>, and{" "}
               <span className="font-medium">YOLO</span>—always aiming for practical impact and clean UX.
             </p>
-            <p className="mt-2 text-[--color-muted] text-lg leading-relaxed">
+            {/* <p className="mt-2 text-[--color-muted] text-lg leading-relaxed">
               I&apos;m also the founder of{" "}
               <span className="text-[--color-foreground] font-medium">Pisces Nexus</span>, an{" "}
               AI-native platform for tourism. The goal is simple: make{" "}
               <span className="font-medium">LLM agents</span> and{" "}
               <span className="font-medium">retrieval</span> useful—secure, personalized, observable and production-ready.{" "}
               If you&apos;d like to try it early, I&apos;m opening a small private beta.
-            </p>
+            </p> */}
 
             {/* Education callout */}
             <div
