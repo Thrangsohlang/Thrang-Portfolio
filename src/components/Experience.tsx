@@ -11,17 +11,25 @@ type ExperienceItem = {
 
 const EXPERIENCE: ExperienceItem[] = [
   {
-    company: "Pisces Nexus",
-    role: "Founder, CEO",
-    start: "Jun 2025",
+    company: "Deep Cognition",
+    role: "Technical Solutions Engineeer",
+    start: "Nov 2025",
     end: "Present",
-    bullets: [
-      "Founded Pisces Nexus and built Alpherg Viator, an AI-powered travel assistant with unified single payment window.",
-      "Designed and implemented system architecture integrating itinerary generation, hotel/cab/guide booking, and payment gateway.",
-      "Led product strategy and development, bridging AI workflows with real-world travel solutions.",
-    ],
-    tech: ["LangGraph", "OpenAI", "Next.js", "FastAPI"],
+    bullets: ["Solve bugs and add features to 'Paper Entry AI'"],
+    tech: ["Python"]
   },
+  // {
+  //   company: "Pisces Nexus",
+  //   role: "Founder, CEO",
+  //   start: "Jun 2025",
+  //   end: "Present",
+  //   bullets: [
+  //     "Founded Pisces Nexus and built Alpherg Viator, an AI-powered travel assistant with unified single payment window.",
+  //     "Designed and implemented system architecture integrating itinerary generation, hotel/cab/guide booking, and payment gateway.",
+  //     "Led product strategy and development, bridging AI workflows with real-world travel solutions.",
+  //   ],
+  //   tech: ["LangGraph", "OpenAI", "Next.js", "FastAPI"],
+  // },
   {
     company: "Sustainability Economics, Bangalore",
     role: "AI Engineer",
