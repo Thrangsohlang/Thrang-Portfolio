@@ -11,12 +11,32 @@ type ExperienceItem = {
 
 const EXPERIENCE: ExperienceItem[] = [
   {
-    company: "Deep Cognition",
-    role: "Technical Solutions Engineeer",
+    company: "Deep Cognition AI · Remote",
+    role: "Technical Solutions Engineer",
     start: "Nov 2025",
     end: "Present",
-    bullets: ["Solve bugs and add features to 'Paper Entry AI'"],
-    tech: ["Python"]
+    bullets: [
+      "Ship production features for PaperEntry used by logistics and customs clients, including reporting dashboards, investigation tools, export workflows, shipment-processing utilities, and TMS integrations with CargoWise and Descartes.",
+      "Build reporting dashboards with filters, sorting, investigation views, and PDF, HTML, and XLS exports for monitoring shipment and document-processing performance.",
+      "Work directly with clients through requirements discussions and live issue reviews, resolving production issues and turning feedback into product improvements.",
+      "Investigate document-processing issues and refine business rules for extraction correction, value propagation, decimal handling, product-code mapping, invoice fallback logic, and supplier-specific behaviour.",
+    ],
+    tech: [
+      "Python",
+      "pandas",
+      "SQL",
+      "Linux",
+      "Docker",
+      "SFTP",
+      "XML",
+      "JSON",
+      "NocoDB",
+      "CargoWise",
+      "Descartes",
+      "PaperEntry",
+      "OpenAI",
+      "Claude",
+    ],
   },
   // {
   //   company: "Pisces Nexus",

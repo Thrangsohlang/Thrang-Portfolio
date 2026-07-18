@@ -55,18 +55,6 @@ export default function About() {
               </span>
             </div>
 
-            {/* Focus tags */}
-            <ul className="mt-6 flex flex-wrap gap-2">
-              {["LLMs", "Agents", "RAG", "LangGraph", "FastAPI", "Next.js", "YOLO / CV", "MLOps-lite"].map((t) => (
-                <li
-                  key={t}
-                  className="rounded-full border border-white/12 bg-white/10 px-3 py-1 text-xs text-neutral-200"
-                >
-                  {t}
-                </li>
-              ))}
-            </ul>
-
             {/* CTAs */}
             <div className="mt-8 flex flex-wrap gap-3">
               <Link

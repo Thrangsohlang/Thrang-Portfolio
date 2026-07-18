@@ -25,21 +25,20 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-4 max-w-3xl text-lg text-[--color-muted]">
-            AI/ML Engineer specializing in agentic systems, RAG, and real-time
-            computer vision. I build production-grade tools with Next.js, FastAPI,
-            GPT, and YOLO.
+            AI/ML Engineer and Technical Solutions Engineer building production-grade
+            document AI, generative AI, RAG, agentic workflows, and computer vision
+            systems that solve real-world business problems.
           </p>
 
           {/* quick skill chips (kept subtle on dark) */}
           <ul className="mt-6 flex flex-wrap items-center justify-center gap-2">
             {[
+              "Python",
               "LLMs",
-              "Agents",
               "RAG",
+              "AI Agents",
               "LangGraph",
               "FastAPI",
-              "Next.js",
-              "YOLO",
               "Computer Vision",
             ].map((t) => (
               <li
